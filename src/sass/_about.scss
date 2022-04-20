@@ -1,0 +1,202 @@
+.about {
+  padding-bottom: 39px;
+  padding-top: 130px;
+  background: #fff5f6;
+  background-image: url(/images/about/back-1x-mob-min.png);
+  background-size: contain;
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 66px;
+    padding-top: 130px;
+    background-image: none;
+    @media screen and (min-width: 1280px) {
+      padding-bottom: 66px;
+      padding-top: 125px;
+      padding-bottom: 39px;
+      background-image: url(/images/about/back-1x-min.png);
+    }
+  }
+}
+.pre-title {
+  font-family: Titan One;
+  display: block;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+}
+
+.section-title {
+  margin-bottom: 26px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 55px;
+  }
+}
+
+.content {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.adout-text {
+  margin-top: 46px;
+}
+
+.text-container {
+  margin: 0 auto;
+  width: 220px;
+  @media screen and (min-width: 768px) {
+    width: 340px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 463px;
+  }
+}
+.first-text {
+  margin-bottom: 33px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;
+  color: #000000;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.78;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.04em;
+  }
+}
+.second-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.58;
+  color: #907e82;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    @media screen and (min-width: 1280px) {
+      margin-left: -15px;
+    }
+  }
+}
+.last-text {
+  padding-top: 10px;
+  margin-bottom: 25px;
+  @media screen and (min-width: 1280px) {
+    padding-top: 35px;
+    margin-bottom: 45px;
+  }
+}
+.about-btn {
+  width: 176px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 22px;
+  border: 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.28;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #d41443;
+  cursor: pointer;
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--btn-dark-hover);
+  }
+}
+.btn-text {
+  padding-right: 5px;
+}
+.main-img {
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+}
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(233, 14, 87, 0.329);
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  transition: opacity 250ms, visibility 250ms;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-about {
+  width: 528px;
+  height: 581px;
+  background: #aec9f3;
+  background-image: url(/images/about/back-1x-min.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 4mm ridge rgba(220, 50, 92, 0.6);
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 50px 43px 50px 40px;
+  animation: animateX30 3000ms infinite 1000ms;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  @media screen and (min-width: 300px) and (max-width: 450px) {
+    width: 95vw;
+    height: 95vh;
+  }
+  @media screen and (min-width: 450px) and (max-width: 750px) {
+    width: 400px;
+    height: 581px;
+  }
+  @media screen and (max-width: 320px) {
+    width: 95vw;
+    height: 95vh;
+  }
+}
+.modal-close {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #907e82;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+.modal-text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.28;
+  text-indent: 35px;
+  text-overflow: clip;
+}
